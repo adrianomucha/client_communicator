@@ -17,6 +17,49 @@ html, body
   font-family: Avenir-Book
   background: $bg
 
+.button
+  padding: 1em 1.5em
+  border-radius: .35em
+  text-decoration: none
+  font-weight: 700
+  font-size: .9em
+  transition: background .4s ease-in-out
+
+.button_blue
+  background: $highlight
+  color: $white
+  &:hover
+    background: darken($highlight, 20%)
+
+.button_download
+  background: $secondary
+  color: $white
+  &:hover
+    background: darken($secondary, 20%)
+
+#sidebar
+  position: fixed
+  left: 100px
+  top: 100px
+  background: transparent
+  width: 300px
+  .title
+    font-size: 2.25em
+    font-weight: 400
+    line-height: 1.35
+    color: $main
+    margin: 3em 0
+  .info
+    .input
+      font-size: 1.35em
+      color: $copy
+      margin: 1.25em 0 0 0
+    .description
+      font-size: .3em
+      font-weight: 700
+      color: $main
+      margin: 0
+
 #chat
   width: 100%
   max-width: 1440px
@@ -24,6 +67,17 @@ html, body
   margin: 0 auto
   padding: 0 150px 150px 500px
   overflow: scroll
+  &::-webkit-scrollbar
+    display: none
+  .avatar
+    width: 40px
+    height: 40px
+    border-radius: 100%
+    overflow: hidden
+    float: left
+    margin: 2em
+    img
+      height: 100%
   .bubble
     margin-bottom: 3em
     .content
@@ -36,16 +90,6 @@ html, body
         display: table
       &::after
         clear: both
-
-      .avatar
-        width: 40px
-        height: 40px
-        border-radius: 100%
-        overflow: hidden
-        float: left
-        margin: 2em
-        img
-          height: 100%
       .copy
         font-size: 1em
         line-height: 1.75
@@ -73,7 +117,7 @@ html, body
   .bubble.attachment
     width: 100%
     position: relative
-    margin: 3em 0
+    margin: 5em 0 2em
     clear: both
     .preview
       width: 15em
@@ -89,4 +133,38 @@ html, body
       width: 100%
       min-width: 22em
       padding: 2em 5em 2em 20em
+      .title
+        font-size: 1.5em
+        color: $main
+        font-weight: 400
+      .description
+        font-size: 1.1em
+        color: $copy
+        line-height: 1.65
+      .buttons_wrapper
+        margin-top: 3em
+        .button
+          margin-right: 1em
+    .icon
+      position: absolute
+      right: 2em
+      top: 2em
+
+  #input
+    width: 100%
+    position: relative
+    .avatar
+      position: absolute
+      left: 2em
+      top: 2em
+      margin: 0
+    textarea
+      background: $white
+      box-shadow: 0px 9px 30px 0px rgba(44,55,79,0.07)
+      border-radius: 25px 25px 25px 2px
+      border: none
+      width: 100%
+      height: 10em
+      font-size: 1.1em
+      padding: 2.25em 2em 2em 5.5em
 

@@ -7,6 +7,48 @@ html, body {
   font-family: Avenir-Book;
   background: #f7f8fb; }
 
+.button {
+  padding: 1em 1.5em;
+  border-radius: 0.35em;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9em;
+  transition: background 0.4s ease-in-out; }
+
+.button_blue {
+  background: #50bbf2;
+  color: #FFFFFF; }
+  .button_blue:hover {
+    background: #0f8ccd; }
+
+.button_download {
+  background: #cedce4;
+  color: #FFFFFF; }
+  .button_download:hover {
+    background: #8cadc0; }
+
+#sidebar {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  background: transparent;
+  width: 300px; }
+  #sidebar .title {
+    font-size: 2.25em;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #393f42;
+    margin: 3em 0; }
+  #sidebar .info .input {
+    font-size: 1.35em;
+    color: #727678;
+    margin: 1.25em 0 0 0; }
+  #sidebar .info .description {
+    font-size: 0.3em;
+    font-weight: 700;
+    color: #393f42;
+    margin: 0; }
+
 #chat {
   width: 100%;
   max-width: 1440px;
@@ -14,6 +56,17 @@ html, body {
   margin: 0 auto;
   padding: 0 150px 150px 500px;
   overflow: scroll; }
+  #chat::-webkit-scrollbar {
+    display: none; }
+  #chat .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    float: left;
+    margin: 2em; }
+    #chat .avatar img {
+      height: 100%; }
   #chat .bubble {
     margin-bottom: 3em; }
     #chat .bubble .content {
@@ -26,15 +79,6 @@ html, body {
         display: table; }
       #chat .bubble .content::after {
         clear: both; }
-      #chat .bubble .content .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        overflow: hidden;
-        float: left;
-        margin: 2em; }
-        #chat .bubble .content .avatar img {
-          height: 100%; }
       #chat .bubble .content .copy {
         font-size: 1em;
         line-height: 1.75;
@@ -61,7 +105,7 @@ html, body {
   #chat .bubble.attachment {
     width: 100%;
     position: relative;
-    margin: 3em 0;
+    margin: 5em 0 2em;
     clear: both; }
     #chat .bubble.attachment .preview {
       width: 15em;
@@ -77,4 +121,37 @@ html, body {
       width: 100%;
       min-width: 22em;
       padding: 2em 5em 2em 20em; }
+      #chat .bubble.attachment .content .title {
+        font-size: 1.5em;
+        color: #393f42;
+        font-weight: 400; }
+      #chat .bubble.attachment .content .description {
+        font-size: 1.1em;
+        color: #727678;
+        line-height: 1.65; }
+      #chat .bubble.attachment .content .buttons_wrapper {
+        margin-top: 3em; }
+        #chat .bubble.attachment .content .buttons_wrapper .button {
+          margin-right: 1em; }
+    #chat .bubble.attachment .icon {
+      position: absolute;
+      right: 2em;
+      top: 2em; }
+  #chat #input {
+    width: 100%;
+    position: relative; }
+    #chat #input .avatar {
+      position: absolute;
+      left: 2em;
+      top: 2em;
+      margin: 0; }
+    #chat #input textarea {
+      background: #FFFFFF;
+      box-shadow: 0px 9px 30px 0px rgba(44, 55, 79, 0.07);
+      border-radius: 25px 25px 25px 2px;
+      border: none;
+      width: 100%;
+      height: 10em;
+      font-size: 1.1em;
+      padding: 2.25em 2em 2em 5.5em; }
 
