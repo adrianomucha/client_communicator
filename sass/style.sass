@@ -1,0 +1,92 @@
+// Variables
+
+$main:      #393f42
+$secondary: #cedce4
+$bg:        #f7f8fb
+$highlight: #50bbf2
+$copy:      #727678
+$white:     #FFFFFF
+
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html, body
+  font-family: Avenir-Book
+  background: $bg
+
+#chat
+  width: 100%
+  max-width: 1440px
+  height: 100%
+  margin: 0 auto
+  padding: 0 150px 150px 500px
+  overflow: scroll
+  .bubble
+    margin-bottom: 3em
+    .content
+      background: $white
+      box-shadow: 0px 9px 30px 0px rgba(44,55,79,0.07)
+      border-radius: 25px 25px 25px 2px
+      display: inline-block
+      &::before, &::after
+        content: ""
+        display: table
+      &::after
+        clear: both
+
+      .avatar
+        width: 40px
+        height: 40px
+        border-radius: 100%
+        overflow: hidden
+        float: left
+        margin: 2em
+        img
+          height: 100%
+      .copy
+        font-size: 1em
+        line-height: 1.75
+        color: $copy
+        padding: 1.5em
+        margin: 0
+    .time
+      font-weight: 700
+      font-size: .8em
+      clear: both
+      color: $main
+  .bubble.client
+    float: right
+    margin-bottom: 3em
+    .content
+      background: #fafbff
+      border-radius: 25px 25px 2px 25px
+      text-align: right
+      float: right
+      .avatar
+        float: right
+    .time
+      text-align: right
+
+  .bubble.attachment
+    width: 100%
+    position: relative
+    margin: 3em 0
+    clear: both
+    .preview
+      width: 15em
+      border-radius: .5em
+      overflow: hidden
+      box-shadow: 0px 9px 30px 0px rgba(44,55,79,0.34)
+      position: absolute
+      left: 2em
+      bottom: 2em
+      img
+        width: 100%
+    .content
+      width: 100%
+      min-width: 22em
+      padding: 2em 5em 2em 20em
+

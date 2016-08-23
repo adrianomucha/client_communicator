@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+  font-family: Avenir-Book;
+  background: #f7f8fb; }
+
+#chat {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 150px 150px 500px;
+  overflow: scroll; }
+  #chat .bubble {
+    margin-bottom: 3em; }
+    #chat .bubble .content {
+      background: #FFFFFF;
+      box-shadow: 0px 9px 30px 0px rgba(44, 55, 79, 0.07);
+      border-radius: 25px 25px 25px 2px;
+      display: inline-block; }
+      #chat .bubble .content::before, #chat .bubble .content::after {
+        content: "";
+        display: table; }
+      #chat .bubble .content::after {
+        clear: both; }
+      #chat .bubble .content .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        overflow: hidden;
+        float: left;
+        margin: 2em; }
+        #chat .bubble .content .avatar img {
+          height: 100%; }
+      #chat .bubble .content .copy {
+        font-size: 1em;
+        line-height: 1.75;
+        color: #727678;
+        padding: 1.5em;
+        margin: 0; }
+    #chat .bubble .time {
+      font-weight: 700;
+      font-size: 0.8em;
+      clear: both;
+      color: #393f42; }
+  #chat .bubble.client {
+    float: right;
+    margin-bottom: 3em; }
+    #chat .bubble.client .content {
+      background: #fafbff;
+      border-radius: 25px 25px 2px 25px;
+      text-align: right;
+      float: right; }
+      #chat .bubble.client .content .avatar {
+        float: right; }
+    #chat .bubble.client .time {
+      text-align: right; }
+  #chat .bubble.attachment {
+    width: 100%;
+    position: relative;
+    margin: 3em 0;
+    clear: both; }
+    #chat .bubble.attachment .preview {
+      width: 15em;
+      border-radius: 0.5em;
+      overflow: hidden;
+      box-shadow: 0px 9px 30px 0px rgba(44, 55, 79, 0.34);
+      position: absolute;
+      left: 2em;
+      bottom: 2em; }
+      #chat .bubble.attachment .preview img {
+        width: 100%; }
+    #chat .bubble.attachment .content {
+      width: 100%;
+      min-width: 22em;
+      padding: 2em 5em 2em 20em; }
+
